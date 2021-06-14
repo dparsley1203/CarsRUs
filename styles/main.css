@@ -29,3 +29,12 @@ ul {
     text-decoration: none;
     cursor: pointer;
 }
+
+body {
+    background: rgb(214, 240, 216);
+}
+
+article > ul{
+    color: rgb(94, 45, 156);
+    font-size: 26px;
+}
