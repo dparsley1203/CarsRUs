@@ -1,3 +1,31 @@
 ul {
     list-style-type: none;
 }
+
+.choices {
+    display: inline-flex;
+    /* border: paleturquoise solid 1px; */
+    background: rgb(204, 169, 169);
+    
+}
+
+.options {
+    /* border: red solid 2px; */
+    padding: 6px;
+    margin: 1px;
+}
+
+#orderButton {
+    background-color: #210783;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    opacity: 0.6;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+}
