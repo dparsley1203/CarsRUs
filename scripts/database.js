@@ -30,7 +30,7 @@ const database = {
     ],
 //test data
     orders: [
-        {id: 1, colorId: 2, interiorId: 3, techId: 4, wheelId: 1, timestamp: 123456789}
+        {id: 1, colorId: 2, interiorId: 3, techId: 4, wheelId: 1, timestamp: 1234567899976}
     ],
 //will be used for custom orders and filled with ids 
     orderBuilder: {} 
@@ -41,7 +41,7 @@ export const addCustomerOrder = () => {
     const newOrder = {...database.orderBuilder}
     const lastIndex = database.orders.length - 1
     newOrder.id = lastIndex >= 0 ? database.orders[lastIndex].id + 1 : 1
-    newOrder.timestamp = Date.new()
+    newOrder.timestamp = Date.now()
     database.orders.push(newOrder)
     document.dispatchEvent(new CustomEvent("stateChanged"))
 }
@@ -54,5 +54,5 @@ export const getOrders = () => [...database.orders]
 
 export const setColors = (colorId) => database.orderBuilder.colorId = colorId
 export const setInteriors = (interiorId) => database.orderBuilder.interiorId = interiorId
-export const setTechnology = (technologyId) => database.orderBuilder.technologyId = technologyId
+export const setTechnology = (techId) => database.orderBuilder.techId = techId
 export const setWheels = (wheelId) => database.orderBuilder.wheelId = wheelId

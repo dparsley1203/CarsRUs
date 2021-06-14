@@ -1,8 +1,18 @@
 import { colorsHTML } from "./PaintColors.js"
 import { interiorsHTML } from "./Interiors.js"
 import { technologyHTML } from "./Technology.js"
-import { Wheels } from "./Wheels.js"
+import { wheelsHTML } from "./Wheels.js"
+import { addCustomerOrder } from "./database.js"
 import { Orders } from "./Orders.js"
+
+document.addEventListener(
+    "click",
+    (event) => {
+        if (event.target.id === "orderButton")
+        addCustomerOrder()
+    
+    }
+)
 
 
 export const CarsRUs = () => {
@@ -26,7 +36,7 @@ export const CarsRUs = () => {
         </section>
         <section class="choices__wheels options">
             <h2>Wheels</h2>
-            
+            ${wheelsHTML()}
         </section>
     </article>
 
@@ -36,7 +46,7 @@ export const CarsRUs = () => {
 
     <article class="customOrders">
         <h2>Custom Car Orders</h2>
-        
+        ${Orders()}
     </article>
 `
 }

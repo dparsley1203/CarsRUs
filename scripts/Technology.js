@@ -1,4 +1,13 @@
-import { getTechnology } from "./database.js"
+import { getTechnology, setTechnology } from "./database.js"
+
+document.addEventListener(
+    "change",
+    (event) => {
+        if (event.target.name === "tech") {
+            setTechnology(parseInt(event.target.value))
+        }
+    }
+)
 
 export const technologyHTML = () => {
     const technology = getTechnology()
